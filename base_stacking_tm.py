@@ -68,7 +68,7 @@ def tm_Base_Stacking(
     lastnuc = primer_seq[-1]
     if (firstnuc == 'G') or (firstnuc == 'C'):
         H += 0.1
-        S += 2.8
+        S += -2.8
     if (firstnuc == 'A') or (firstnuc == 'T'):
         H += 2.3
         S += 4.1
