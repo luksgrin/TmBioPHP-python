@@ -1,6 +1,18 @@
 import sys
 import math
 
+#Based on Joseba Bikandi's work
+#original source code available at http://www.biophp.org/minitools/melting_temperature/).
+#The following references were used to develop the script:
+#-SantaLucia J. A unified view of polymer, dumbbell, and oligonucleotide DNA nearest-neighbor
+#thermodynamics. Proc Natl Acad Sci U S A. 1998 Feb 17;95(4):1460-5.
+#http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=9465037
+#-von Ahsen N, Oellerich M, Armstrong VW, Sch�tz E. Application of a thermodynamic nearest-neighbor
+#model to estimate nucleic acid stability and optimize probe design: prediction of melting points
+#of multiple mutations of apolipoprotein B-3500 and factor V with a hybridization probe genotyping
+#assay on the LightCycler. Clin Chem. 1999 Dec;45(12):2094-101.
+#http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=10585340
+
 def tm_Base_Stacking(
     primer_seq,  #Primer sequence only containing ATGC
     conc_primer, #Primer concentration in nM
